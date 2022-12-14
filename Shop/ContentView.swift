@@ -3,10 +3,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject private var viewModel = FetchViewModel()
+    
     var body: some View {
         VStack {
             Button(action: {
-                FetchViewModel().getData(screen: .main)
+                viewModel.getData(screen: .Main)
+                print(self.viewModel)
                 
             })
             {
@@ -14,10 +18,14 @@ struct ContentView: View {
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
             }
-            Text("Hello, world!")
+            .onAppear {
+                viewModel.getData(screen: .Main)
+            }
+            Text(viewModel.mainData?.bestSeller.first?.title ?? "HELLO")
         }
         .padding()
     }
+        
 }
 
 struct ContentView_Previews: PreviewProvider {
