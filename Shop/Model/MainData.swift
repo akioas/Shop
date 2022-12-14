@@ -9,7 +9,7 @@ struct MainData: Decodable {
 
 struct HomeStore: Decodable {
     var id: Int
-    var isNew: Bool
+    var isNew: Bool?
     var title: String
     var subtitle: String
     var picture: String

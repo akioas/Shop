@@ -15,3 +15,4 @@ struct Basket: Decodable {
     var price: Int
     var title: String
 }
+
