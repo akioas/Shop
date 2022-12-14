@@ -4,12 +4,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject private var viewModel = FetchViewModel()
+    @ObservedObject private var viewModel = ProductViewModel()
     
     var body: some View {
         VStack {
             Button(action: {
-                viewModel.getData(screen: .Main)
+                viewModel.getData()
                 print(self.viewModel)
                 
             })
@@ -19,9 +19,9 @@ struct ContentView: View {
                     .foregroundColor(.accentColor)
             }
             .onAppear {
-                viewModel.getData(screen: .Main)
+                viewModel.getData()
             }
-            Text(viewModel.mainData?.bestSeller.first?.title ?? "HELLO")
+            Text(viewModel.viewData?.color?.first ?? "HELLO")
         }
         .padding()
     }

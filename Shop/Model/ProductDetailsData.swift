@@ -4,9 +4,9 @@ import Foundation
 struct ProductDetailsData: Decodable {
     var CPU: String
     var camera: String
-    var capacity: [Int]
-    var color: [String]
-    var id: Int
+    var capacity: [String]
+    var color: [String]?
+    var id: String
     var images: [String]
     var isFavorites: Bool
     var price: Int
