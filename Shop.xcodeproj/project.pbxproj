@@ -15,6 +15,11 @@
 		4A66A279294A5EE20058EAA6 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66A278294A5EE20058EAA6 /* MainViewModel.swift */; };
 		4A66A27B294A5F180058EAA6 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66A27A294A5F180058EAA6 /* ProductViewModel.swift */; };
 		4A66A27D294A5F380058EAA6 /* MyCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66A27C294A5F380058EAA6 /* MyCartViewModel.swift */; };
+		4A6FACAD294B789B0035858E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FACAC294B789B0035858E /* Launch Screen.storyboard */; };
+		4A6FACB1294B85170035858E /* MarkPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FACB0294B85170035858E /* MarkPro.ttf */; };
+		4A6FACB7294B880C0035858E /* MarkPro-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FACB6294B87C90035858E /* MarkPro-Heavy.ttf */; };
+		4A6FACB8294B880E0035858E /* MarkPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FACB4294B878E0035858E /* MarkPro-Bold.ttf */; };
+		4A6FACB9294B88100035858E /* MarkPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FACB5294B87C10035858E /* MarkPro-Medium.ttf */; };
 		4AE38CD82949EEF70022F284 /* ShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE38CD72949EEF70022F284 /* ShopApp.swift */; };
 		4AE38CDA2949EEF70022F284 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE38CD92949EEF70022F284 /* ContentView.swift */; };
 		4AE38CDC2949EEF90022F284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE38CDB2949EEF90022F284 /* Assets.xcassets */; };
@@ -34,6 +39,12 @@
 		4A66A278294A5EE20058EAA6 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4A66A27A294A5F180058EAA6 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		4A66A27C294A5F380058EAA6 /* MyCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewModel.swift; sourceTree = "<group>"; };
+		4A6FACAC294B789B0035858E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		4A6FACB0294B85170035858E /* MarkPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkPro.ttf; sourceTree = "<group>"; };
+		4A6FACB4294B878E0035858E /* MarkPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.ttf"; sourceTree = "<group>"; };
+		4A6FACB5294B87C10035858E /* MarkPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Medium.ttf"; sourceTree = "<group>"; };
+		4A6FACB6294B87C90035858E /* MarkPro-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Heavy.ttf"; sourceTree = "<group>"; };
+		4A6FACBA294B88300035858E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4AE38CD42949EEF70022F284 /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE38CD72949EEF70022F284 /* ShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopApp.swift; sourceTree = "<group>"; };
 		4AE38CD92949EEF70022F284 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +70,6 @@
 		4A35D529294B56DF0008F720 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4AE38CD92949EEF70022F284 /* ContentView.swift */,
 				4AE3DDED294B621A00902C24 /* SettingsView.swift */,
 				4A35D530294B57A20008F720 /* MainView.swift */,
 				4A35D52A294B56F30008F720 /* ProductDetailsView.swift */,
@@ -72,12 +82,31 @@
 			isa = PBXGroup;
 			children = (
 				4A66A2762949F6830058EAA6 /* APIManager.swift */,
-				4A35D52E294B57570008F720 /* CoordinatorService.swift */,
 				4A66A278294A5EE20058EAA6 /* MainViewModel.swift */,
 				4A66A27A294A5F180058EAA6 /* ProductViewModel.swift */,
 				4A66A27C294A5F380058EAA6 /* MyCartViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4A6FACAB294B76BC0035858E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4AE38CD92949EEF70022F284 /* ContentView.swift */,
+				4A35D52E294B57570008F720 /* CoordinatorService.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4A6FACB3294B87710035858E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4A6FACB0294B85170035858E /* MarkPro.ttf */,
+				4A6FACB6294B87C90035858E /* MarkPro-Heavy.ttf */,
+				4A6FACB4294B878E0035858E /* MarkPro-Bold.ttf */,
+				4A6FACB5294B87C10035858E /* MarkPro-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		4AE38CCB2949EEF70022F284 = {
@@ -99,9 +128,13 @@
 		4AE38CD62949EEF70022F284 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				4A6FACBA294B88300035858E /* Info.plist */,
 				4AE38CD72949EEF70022F284 /* ShopApp.swift */,
+				4A6FACAB294B76BC0035858E /* Coordinator */,
 				4A35D529294B56DF0008F720 /* View */,
 				4AE38CDB2949EEF90022F284 /* Assets.xcassets */,
+				4A6FACB3294B87710035858E /* Fonts */,
+				4A6FACAC294B789B0035858E /* Launch Screen.storyboard */,
 				4A66A2752949F5FF0058EAA6 /* ViewModel */,
 				4AE38CE72949F0190022F284 /* Model */,
 				4AE38CDD2949EEF90022F284 /* Preview Content */,
@@ -185,8 +218,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6FACB8294B880E0035858E /* MarkPro-Bold.ttf in Resources */,
+				4A6FACAD294B789B0035858E /* Launch Screen.storyboard in Resources */,
+				4A6FACB1294B85170035858E /* MarkPro.ttf in Resources */,
+				4A6FACB9294B88100035858E /* MarkPro-Medium.ttf in Resources */,
 				4AE38CDF2949EEF90022F284 /* Preview Assets.xcassets in Resources */,
 				4AE38CDC2949EEF90022F284 /* Assets.xcassets in Resources */,
+				4A6FACB7294B880C0035858E /* MarkPro-Heavy.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,11 +380,14 @@
 				DEVELOPMENT_TEAM = 28P4VGRC5F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -372,11 +413,14 @@
 				DEVELOPMENT_TEAM = 28P4VGRC5F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
