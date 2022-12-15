@@ -2,16 +2,23 @@
 
 import SwiftUI
 
-struct ContentView: View {
+
+struct ProductDetailsView: View {
     
     @ObservedObject private var viewModel = ProductViewModel()
     
     var body: some View {
         VStack {
+            Button {
+                Coordinator.pop()
+            } label: {
+                Image(systemName: "arrow.left")
+                    .foregroundColor(.green)
+
+            }
+            
             Button(action: {
-                viewModel.getData()
-                print(self.viewModel)
-                
+                Coordinator.push(view: MyCartView())
             })
             {
                 Image(systemName: "globe")
@@ -21,15 +28,9 @@ struct ContentView: View {
             .onAppear {
                 viewModel.getData()
             }
-            Text(viewModel.viewData?.color?.first ?? "HELLO")
+            Text(viewModel.viewData?.color?.first ?? "DETAILS")
         }
         .padding()
     }
         
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
 }

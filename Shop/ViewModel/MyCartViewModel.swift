@@ -10,7 +10,7 @@ class MyCartViewModel: ObservableObject {
     
     func getData() {
         
-        apiManager.fetch(screen: .MyCart) { (result: Result<MyCartData, Error>) in
+        apiManager.fetch(screen: .myCart) { (result: Result<MyCartData, Error>) in
             switch result {
             case .success(let result):
                 self.viewData = result
