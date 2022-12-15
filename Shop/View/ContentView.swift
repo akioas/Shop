@@ -11,6 +11,7 @@ struct ContentView: View {
             coordinator.container.view
                 .transition(.move(edge: .trailing))
         }
+        .preferredColorScheme(.light)
     }
 }
 

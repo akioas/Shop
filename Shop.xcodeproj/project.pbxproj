@@ -22,6 +22,7 @@
 		4AE38CE62949F0040022F284 /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE38CE52949F0040022F284 /* MainData.swift */; };
 		4AE38CE92949F03C0022F284 /* ProductDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE38CE82949F03C0022F284 /* ProductDetailsData.swift */; };
 		4AE38CEB2949F0600022F284 /* MyCartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE38CEA2949F0600022F284 /* MyCartData.swift */; };
+		4AE3DDEE294B621A00902C24 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3DDED294B621A00902C24 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		4AE38CE52949F0040022F284 /* MainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
 		4AE38CE82949F03C0022F284 /* ProductDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsData.swift; sourceTree = "<group>"; };
 		4AE38CEA2949F0600022F284 /* MyCartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartData.swift; sourceTree = "<group>"; };
+		4AE3DDED294B621A00902C24 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE38CD92949EEF70022F284 /* ContentView.swift */,
+				4AE3DDED294B621A00902C24 /* SettingsView.swift */,
 				4A35D530294B57A20008F720 /* MainView.swift */,
 				4A35D52A294B56F30008F720 /* ProductDetailsView.swift */,
 				4A35D52C294B56FE0008F720 /* MyCartView.swift */,
@@ -201,6 +204,7 @@
 				4A35D531294B57A20008F720 /* MainView.swift in Sources */,
 				4A35D52F294B57570008F720 /* CoordinatorService.swift in Sources */,
 				4AE38CDA2949EEF70022F284 /* ContentView.swift in Sources */,
+				4AE3DDEE294B621A00902C24 /* SettingsView.swift in Sources */,
 				4AE38CE62949F0040022F284 /* MainData.swift in Sources */,
 				4AE38CD82949EEF70022F284 /* ShopApp.swift in Sources */,
 				4A66A27B294A5F180058EAA6 /* ProductViewModel.swift in Sources */,
@@ -341,8 +345,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,8 +375,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,17 +6,20 @@ import SwiftUI
 struct MainView: View {
     
     @ObservedObject private var viewModel = MainViewModel()
+    @State var isShowingSettings = false
+    
     
     var body: some View {
         VStack {
-            
-            Button(action: {
-                Coordinator.push(view: MyCartView())
-            })
-            {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
+            if !isShowingSettings {
+                Button(action: {
+                    Coordinator.push(view: MyCartView())
+                })
+                {
+                    Image(systemName: "globe")
+                        .imageScale(.large)
+                        .foregroundColor(.accentColor)
+                }
             }
             Button(action: {
                 Coordinator.push(view: ProductDetailsView())
@@ -28,10 +31,22 @@ struct MainView: View {
             }
             .onAppear {
                 viewModel.getData()
+                isShowingSettings = false
             }
             Text(viewModel.viewData?.bestSeller.first?.title ?? "MAIN")
+            Button{
+                withAnimation{
+                    isShowingSettings.toggle()
+                }
+            } label: {
+                Text("SETTINGS")
+            }
         }
         .padding()
-    }
+    
         
+        SettingsView(isShowing: $isShowingSettings)
+        
+    }
+    
 }
