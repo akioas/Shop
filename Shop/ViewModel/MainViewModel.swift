@@ -10,7 +10,7 @@ class MainViewModel: ObservableObject {
     
     func getData() {
         
-        apiManager.fetch(screen: .Main) { (result: Result<MainData, Error>) in
+        apiManager.fetch(screen: .main) { (result: Result<MainData, Error>) in
             switch result {
             case .success(let result):
                 self.viewData = result

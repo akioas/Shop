@@ -10,7 +10,7 @@ class ProductViewModel: ObservableObject {
     
     func getData() {
         
-        apiManager.fetch(screen: .ProductDetails) { (result: Result<ProductDetailsData, Error>) in
+        apiManager.fetch(screen: .productDetails) { (result: Result<ProductDetailsData, Error>) in
             switch result {
             case .success(let result):
                 self.viewData = result
