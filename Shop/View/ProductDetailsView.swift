@@ -29,7 +29,9 @@ struct ProductDetailsView: View {
                         .foregroundColor(.accentColor)
                 }
                 .onAppear {
-                    viewModel.getData()
+                    if viewModel.viewData == nil {
+                        viewModel.getData()
+                    }
                 }
                 Text(viewModel.viewData?.color?.first ?? "DETAILS")
             }

@@ -3,11 +3,11 @@
 import Foundation
 
 struct MainData: Decodable {
-    var homeStore: [HomeStore]
-    var bestSeller: [BestSeller]
+    var homeStore: [HomeStoreData]
+    var bestSeller: [BestSellerData]
 }
 
-struct HomeStore: Decodable {
+struct HomeStoreData: Decodable {
     var id: Int
     var isNew: Bool?
     var title: String
@@ -16,7 +16,7 @@ struct HomeStore: Decodable {
     var isBuy: Bool
 }
 
-struct BestSeller: Decodable {
+struct BestSellerData: Decodable {
     var id: Int
     var isFavorites: Bool
     var title: String

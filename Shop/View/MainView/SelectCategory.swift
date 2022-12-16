@@ -34,7 +34,7 @@ struct SelectCategory: View {
                                     Text("\(index)")
                                 }
                             }
-                        }.frame(maxHeight: .infinity)
+                        }
                     }
             
         }

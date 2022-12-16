@@ -8,11 +8,11 @@ struct MainView: View {
     @ObservedObject private var viewModel = MainViewModel()
     @State var isShowingSettings = false
     @State var searchText = ""
-
+    
     
     var body: some View {
         ZStack {
-            Color("Background") 
+            Color("Background")
                 .ignoresSafeArea()
             VStack {
                 
@@ -22,32 +22,13 @@ struct MainView: View {
                 
                 SearchBar(text: $searchText)
                 
+                HotSales(homeStore: $viewModel.homeStore)
                 
-                Spacer()
+                BestSeller(bestSeller: $viewModel.bestSeller)
                 
                 if !isShowingSettings {
-                    Button(action: {
-                        Coordinator.push(view: MyCartView())
-                    })
-                    {
-                        Image(systemName: "globe")
-                            .imageScale(.large)
-                            .foregroundColor(.accentColor)
-                    }
+                    Explorer()
                 }
-                Button(action: {
-                    Coordinator.push(view: ProductDetailsView())
-                })
-                {
-                    Image(systemName: "flame")
-                        .imageScale(.large)
-                        .foregroundColor(.accentColor)
-                }
-                .onAppear {
-                    viewModel.getData()
-                    isShowingSettings = false
-                }
-                Text(viewModel.bestSeller?.first?.title ?? "MAIN")
                 
             }
             .padding()
@@ -55,12 +36,19 @@ struct MainView: View {
             
             Settings(isShowing: $isShowingSettings)
         }
-        
+        .onAppear {
+            if (viewModel.bestSeller == nil || viewModel.homeStore == nil) {
+                viewModel.getData()
+            }
+            isShowingSettings = false
+        }
     }
     
-    
-    
 }
+
+
+
+
 
 
 
