@@ -4,7 +4,8 @@ import Foundation
 
 class MainViewModel: ObservableObject {
     
-    @Published var viewData: MainData?
+    @Published var bestSeller: [BestSellerData]?
+    @Published var homeStore: [HomeStoreData]?
     
     private let apiManager: APIManager = APIManager()
     
@@ -13,7 +14,8 @@ class MainViewModel: ObservableObject {
         apiManager.fetch(screen: .main) { (result: Result<MainData, Error>) in
             switch result {
             case .success(let result):
-                self.viewData = result
+                self.homeStore = result.homeStore.sorted(by: {$0.id < $1.id})
+                self.bestSeller = result.bestSeller.sorted(by: {$0.id < $1.id})
             case .failure(let error):
                 print(error)
             }
