@@ -7,13 +7,24 @@ struct MainView: View {
     
     @ObservedObject private var viewModel = MainViewModel()
     @State var isShowingSettings = false
-    
+    @State var searchText = ""
+
     
     var body: some View {
         ZStack {
             Color("Background") 
                 .ignoresSafeArea()
             VStack {
+                
+                TopBar(isShowing: $isShowingSettings)
+                
+                SelectCategory()
+                
+                SearchBar(text: $searchText)
+                
+                
+                Spacer()
+                
                 if !isShowingSettings {
                     Button(action: {
                         Coordinator.push(view: MyCartView())
@@ -36,18 +47,13 @@ struct MainView: View {
                     viewModel.getData()
                     isShowingSettings = false
                 }
-                Text(viewModel.viewData?.bestSeller.first?.title ?? "MAIN")
-                Button{
-                    withAnimation{
-                        isShowingSettings.toggle()
-                    }
-                } label: {
-                    Text("SETTINGS")
-                }
+                Text(viewModel.bestSeller?.first?.title ?? "MAIN")
+                
             }
             .padding()
             
-            SettingsView(isShowing: $isShowingSettings)
+            
+            Settings(isShowing: $isShowingSettings)
         }
         
     }

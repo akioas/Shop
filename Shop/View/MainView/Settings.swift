@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SettingsView: View {
+struct Settings: View {
     
     @Binding var isShowing: Bool
     
@@ -11,6 +11,7 @@ struct SettingsView: View {
                     
                     
                     HStack {
+                        
                         Button(action: {
                             isShowing.toggle()
                         })

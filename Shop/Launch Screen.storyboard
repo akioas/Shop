@@ -7,11 +7,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MarkPro-Bold.ttf">
-            <string>MarkPro-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -30,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="xBL-ZW-CgV">
-                                <rect key="frame" x="235" y="392.66666666666669" width="129.66666666666663" height="58.666666666666686"/>
+                                <rect key="frame" x="215" y="392.66666666666669" width="129.66666666666663" height="58.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiw-6w-KxT">
                                         <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="29.333333333333332"/>
@@ -68,7 +63,7 @@
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xBL-ZW-CgV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="26o-aa-cAU"/>
-                            <constraint firstItem="xBL-ZW-CgV" firstAttribute="leading" secondItem="C5m-Ew-nzs" secondAttribute="trailing" constant="-60" id="AbB-xH-YTa"/>
+                            <constraint firstItem="xBL-ZW-CgV" firstAttribute="leading" secondItem="C5m-Ew-nzs" secondAttribute="trailing" constant="-80" id="AbB-xH-YTa"/>
                             <constraint firstItem="C5m-Ew-nzs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UJj-1T-1vm"/>
                             <constraint firstItem="xBL-ZW-CgV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tlW-iD-t3F"/>
                             <constraint firstItem="C5m-Ew-nzs" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zYm-7H-ocj"/>
