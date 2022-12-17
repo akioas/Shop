@@ -21,9 +21,7 @@ struct MyCartView: View {
                 }
                 
                 .onAppear {
-                    if viewModel.viewData == nil {
-                        viewModel.getData()
-                    }
+                    viewModel.getData()
                 }
                 Text(viewModel.viewData?.basket?.first?.images ?? "CART")
             }

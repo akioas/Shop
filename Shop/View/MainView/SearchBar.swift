@@ -3,7 +3,7 @@ import SwiftUI
 struct SearchBar: View {
     @Binding var text: String
  
-    @State var isEditing = false
+    @Binding var isEditing: Bool
  
     
     var body: some View {

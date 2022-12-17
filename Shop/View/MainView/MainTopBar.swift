@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct TopBar: View {
+struct MainTopBar: View {
     
     @Binding var isShowing: Bool
     

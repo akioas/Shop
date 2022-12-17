@@ -8,7 +8,7 @@ struct MainView: View {
     @ObservedObject private var viewModel = MainViewModel()
     @State var isShowingSettings = false
     @State var searchText = ""
-    
+    @State var isEditing = false
     
     var body: some View {
         ZStack {
@@ -16,11 +16,11 @@ struct MainView: View {
                 .ignoresSafeArea()
             VStack {
                 
-                TopBar(isShowing: $isShowingSettings)
+                MainTopBar(isShowing: $isShowingSettings)
                 
                 SelectCategory()
                 
-                SearchBar(text: $searchText)
+                SearchBar(text: $searchText, isEditing: $isEditing)
                 
                 HotSales(homeStore: $viewModel.homeStore)
                 
@@ -33,8 +33,9 @@ struct MainView: View {
             }
             .padding()
             
-            
-            Settings(isShowing: $isShowingSettings)
+            if !isEditing {
+                Settings(isShowing: $isShowingSettings)
+            }
         }
         .onAppear {
             if (viewModel.bestSeller == nil || viewModel.homeStore == nil) {

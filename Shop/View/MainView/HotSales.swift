@@ -6,6 +6,8 @@ import SwiftUI
 struct HotSales: View {
     
     @Binding var homeStore: [HomeStoreData]?
+    @State private var index = 0
+    
     
     var body: some View {
         
@@ -23,10 +25,12 @@ struct HotSales: View {
                 
             }
             
-            ScrollView(.horizontal) {
-                HStack(spacing: 5) {
-                    if let homeStore = homeStore {
-                        ForEach(0..<(homeStore.count)) { index in
+            
+            HStack(spacing: 5) {
+                if let homeStore = homeStore {
+                    TabView(selection: $index) {
+                        ForEach((0..<homeStore.count), id: \.self) { index in
+                            
                             ZStack{
                                 Button(action: {
                                     Coordinator.push(view: ProductDetailsView())
@@ -46,15 +50,20 @@ struct HotSales: View {
                                     )
                                 }
                                 Text(String(homeStore[index].id))
+
                             }
                         }
                     }
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                 }
             }
+            
         }
         
     }
     
 }
+
+
 
 
