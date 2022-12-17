@@ -4,7 +4,8 @@ import Foundation
 
 class ProductViewModel: ObservableObject {
     
-    @Published var viewData: ProductDetailsData?
+    @Published var productDetailsData: ProductDetailsData?
+    @Published var images: [String]?
     
     private let apiManager: APIManager = APIManager()
     
@@ -13,7 +14,9 @@ class ProductViewModel: ObservableObject {
         apiManager.fetch(screen: .productDetails) { (result: Result<ProductDetailsData, Error>) in
             switch result {
             case .success(let result):
-                self.viewData = result
+                self.productDetailsData = result
+                self.images = result.images
+                self.images?.append(self.images?.first ?? "")
             case .failure(let error):
                 print(error)
             }
