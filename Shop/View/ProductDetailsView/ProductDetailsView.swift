@@ -17,6 +17,8 @@ struct ProductDetailsView: View {
                 
                 ProductImages(images: $viewModel.images)
                 
+                ProductDescription(data: $viewModel.productDetailsData)
+                
             }
             
         }
@@ -30,18 +32,6 @@ struct ProductDetailsView: View {
     
     
 }
-
-func getImages(images: [String]?) -> [LAsyncImage]? {
-    var asyncImages: [LAsyncImage]?
-    if let images = images {
-        for image in images {
-            asyncImages?.append((LAsyncImage(url: URL(string: image)!)))
-
-        }
-    }
-    return asyncImages
-}
-
 
 
 struct ProductDetailsView_Previews: PreviewProvider {

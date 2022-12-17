@@ -16,7 +16,6 @@ class ProductViewModel: ObservableObject {
             case .success(let result):
                 self.productDetailsData = result
                 self.images = result.images
-                self.images?.append(self.images?.first ?? "")
             case .failure(let error):
                 print(error)
             }

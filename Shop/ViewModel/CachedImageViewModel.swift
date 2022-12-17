@@ -54,40 +54,6 @@ class UrlImageModel: ObservableObject {
     }
 }
 
-class ImageCache {
-    var cache = NSCache<NSURL, UIImage>()
-    private static var imageCache = ImageCache()
-    
-    subscript(_ key: URL) -> UIImage? {
-        get { cache.object(forKey: key as NSURL) }
-        set { newValue == nil ? cache.removeObject(forKey: key as NSURL) : cache.setObject(newValue!, forKey: key as NSURL) }
-    }
-    
-    static func getImageCache() -> ImageCache {
-        return imageCache
-    }
-}
 
 
-struct LAsyncImage: View {
-    
-    private var url: URL?
-    @ObservedObject var image: UrlImageModel
-    init(url: URL?) {
-        self.url = url
-        image = UrlImageModel(url: url)
-        
-    }
-    
-    var body: some View {
-        if let image = image.image {
-            Image(uiImage: image)
-                .resizable()
-        } else {
-            ProgressView()
-        }
-        
-    }
-    
-    
-}
+

@@ -50,36 +50,33 @@ struct Carousel: View {
             if let images = images {
                 if focusedImage > 0 {
                     
-                    LAsyncImage(url: URL(string: images[focusedImage - 1])!
-                                            
-                                            
+                    CachedImage(url: URL(string: images[focusedImage - 1])!
+                                
+                                
                     )
                     .frame(width: 200, height: 200)
                     .offset(x: self.x)
                     
                 }
-                LAsyncImage(url: URL(string: images[focusedImage])!
-                                        
+                CachedImage(url: URL(string: images[focusedImage])!
+                            
                 )
                 .frame(width: 300, height: 300)
                 .offset(x: self.x)
                 
                 
                 if focusedImage < (images.count - 1)  {
-                    LAsyncImage(url: URL(string: images[focusedImage + 1])!
-                                           
+                    CachedImage(url: URL(string: images[focusedImage + 1])!
+                                
                     )
                     .frame(width: 200, height: 200)
                     .offset(x: self.x)
                     
                 }
             }
-            
-            
-            
         }
         
-        .frame(width: UIScreen.main.bounds.width - 30, height: 600)
+        .frame(width: UIScreen.main.bounds.width - 30, height: 400)
         
         .highPriorityGesture(DragGesture()
                              
@@ -104,8 +101,7 @@ struct Carousel: View {
                             
                             
                             focusedImage -= 1
-                            print(self.x)
-                            print(focusedImage)
+                           
                             self.x = 0
                         }
                         else{
