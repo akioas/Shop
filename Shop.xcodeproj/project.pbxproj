@@ -20,6 +20,9 @@
 		4A6FACB7294B880C0035858E /* MarkPro-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FACB6294B87C90035858E /* MarkPro-Heavy.ttf */; };
 		4A6FACB8294B880E0035858E /* MarkPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FACB4294B878E0035858E /* MarkPro-Bold.ttf */; };
 		4A6FACB9294B88100035858E /* MarkPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FACB5294B87C10035858E /* MarkPro-Medium.ttf */; };
+		4A7103D7294E3492000115A9 /* MyCartTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7103D6294E3492000115A9 /* MyCartTopBar.swift */; };
+		4A7103D9294E34F3000115A9 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7103D8294E34F3000115A9 /* BackButton.swift */; };
+		4A7103DC294E36E2000115A9 /* MyCartDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7103DB294E36E2000115A9 /* MyCartDescription.swift */; };
 		4A808EE6294DEF6E001D8108 /* CachedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A808EE5294DEF6E001D8108 /* CachedImageViewModel.swift */; };
 		4A948C1A294CD15400947798 /* ProductDetailsTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A948C19294CD15400947798 /* ProductDetailsTopBar.swift */; };
 		4A948C1C294CD35900947798 /* ProductImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A948C1B294CD35900947798 /* ProductImages.swift */; };
@@ -58,6 +61,9 @@
 		4A6FACB5294B87C10035858E /* MarkPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Medium.ttf"; sourceTree = "<group>"; };
 		4A6FACB6294B87C90035858E /* MarkPro-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Heavy.ttf"; sourceTree = "<group>"; };
 		4A6FACBA294B88300035858E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4A7103D6294E3492000115A9 /* MyCartTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartTopBar.swift; sourceTree = "<group>"; };
+		4A7103D8294E34F3000115A9 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		4A7103DB294E36E2000115A9 /* MyCartDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartDescription.swift; sourceTree = "<group>"; };
 		4A808EE5294DEF6E001D8108 /* CachedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageViewModel.swift; sourceTree = "<group>"; };
 		4A948C19294CD15400947798 /* ProductDetailsTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsTopBar.swift; sourceTree = "<group>"; };
 		4A948C1B294CD35900947798 /* ProductImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImages.swift; sourceTree = "<group>"; };
@@ -98,8 +104,9 @@
 			children = (
 				4AA4D0B6294C67870085B78F /* MainView */,
 				4A948C18294CD13600947798 /* ProductDetailsView */,
-				4A35D52C294B56FE0008F720 /* MyCartView.swift */,
+				4A7103DA294E3523000115A9 /* New Group */,
 				4A9EAF7A294E012200767997 /* CachedImage.swift */,
+				4A7103D8294E34F3000115A9 /* BackButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +142,16 @@
 				4A6FACB5294B87C10035858E /* MarkPro-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4A7103DA294E3523000115A9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				4A35D52C294B56FE0008F720 /* MyCartView.swift */,
+				4A7103D6294E3492000115A9 /* MyCartTopBar.swift */,
+				4A7103DB294E36E2000115A9 /* MyCartDescription.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4A948C18294CD13600947798 /* ProductDetailsView */ = {
@@ -309,8 +326,11 @@
 				4AE38CD82949EEF70022F284 /* ShopApp.swift in Sources */,
 				4A66A27B294A5F180058EAA6 /* ProductViewModel.swift in Sources */,
 				4A808EE6294DEF6E001D8108 /* CachedImageViewModel.swift in Sources */,
+				4A7103D9294E34F3000115A9 /* BackButton.swift in Sources */,
+				4A7103DC294E36E2000115A9 /* MyCartDescription.swift in Sources */,
 				4AA4D0BA294C6C380085B78F /* SelectCategory.swift in Sources */,
 				4AE38CEB2949F0600022F284 /* MyCartData.swift in Sources */,
+				4A7103D7294E3492000115A9 /* MyCartTopBar.swift in Sources */,
 				4A35D52D294B56FE0008F720 /* MyCartView.swift in Sources */,
 				4A948C1C294CD35900947798 /* ProductImages.swift in Sources */,
 				4AA4D0BC294C6FDE0085B78F /* SearchBar.swift in Sources */,

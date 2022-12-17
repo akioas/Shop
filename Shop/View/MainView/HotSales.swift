@@ -37,17 +37,7 @@ struct HotSales: View {
                                 })
                                 {
                                     
-                                    AsyncImage(
-                                        url: URL(string: (homeStore[index].picture)),
-                                        content: { image in
-                                            image.resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(maxWidth: 100, maxHeight: 100)
-                                        },
-                                        placeholder: {
-                                            ProgressView()
-                                        }
-                                    )
+                                    CachedImage(url: URL(string: (homeStore[index].picture)))
                                 }
                                 Text(String(homeStore[index].id))
 
