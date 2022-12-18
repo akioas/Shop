@@ -46,6 +46,5 @@ struct Settings: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .ignoresSafeArea()
-        .animation(.easeInOut, value: isShowing)
     }
 }

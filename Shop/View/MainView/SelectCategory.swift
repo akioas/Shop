@@ -5,6 +5,10 @@ import SwiftUI
 
 struct SelectCategory: View {
     
+    private let categories = ["Phones", "Computer", "Health", "Books", "Heart"]
+    
+    @State var selectedCategory = "Phones"
+    
     var body: some View {
         
         VStack {
@@ -12,7 +16,7 @@ struct SelectCategory: View {
             HStack {
                 
                 Text("Select Category")
-                    .font(.largeTitle)
+                    .font(.custom("MarkPro-Bold", size: 30))
                 
                 Spacer()
                 
@@ -22,16 +26,36 @@ struct SelectCategory: View {
             }
             
             ScrollView(.horizontal) {
-                        HStack(spacing: 5) {
-                            ForEach(0..<5) { index in
+                        HStack(spacing: 15) {
+                            ForEach(categories, id: \.self) { category in
                                 VStack {
-                                    Text("\(index)")
-                                        .foregroundColor(.white)
-                                        .frame(width: 100, height: 100)
-                                        .background(Color("Orange"))
-                                        .cornerRadius(50)
-                                        .font(.largeTitle)
-                                    Text("\(index)")
+                                    ZStack {
+                                        if selectedCategory == category {
+                                            Color("Orange")
+                                                .frame(width: 71, height: 71)
+                                                .cornerRadius(36)
+                                        } else {
+                                            Color(.white)
+                                                .frame(width: 71, height: 71)
+                                                .cornerRadius(36)
+                                        }
+                                        Button(action: {
+                                            selectedCategory = category
+                                        }) {
+                                            if selectedCategory == category {
+                                                Image(category)
+                                                    .frame(width: 32, height: 32)
+                                                    .foregroundColor(.white)
+                                                    .blendMode(.colorDodge)
+                                            } else {
+                                                Image(category)
+                                                    .frame(width: 32, height: 32)
+                                                    .foregroundColor(Color(red: 0.70, green: 0.70, blue: 0.76))
+                                            }
+                                        }
+                                    }
+                                    Text(category)
+                                       .foregroundColor(Color("Orange"))
                                 }
                             }
                         }
@@ -41,4 +65,10 @@ struct SelectCategory: View {
         
     }
     
+}
+
+struct SelectCategory_Previews: PreviewProvider {
+    static var previews: some View {
+        SelectCategory()
+    }
 }

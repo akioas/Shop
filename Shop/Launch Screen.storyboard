@@ -17,55 +17,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C5m-Ew-nzs">
-                                <rect key="frame" x="95" y="323" width="200" height="198.66666666666674"/>
+                                <rect key="frame" x="129" y="357" width="132" height="130.66666666666669"/>
                                 <color key="tintColor" red="1" green="0.39215686274509803" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="6gJ-hY-wpE"/>
-                                    <constraint firstAttribute="width" constant="200" id="DHq-Jz-ica"/>
+                                    <constraint firstAttribute="height" constant="132" id="6gJ-hY-wpE"/>
+                                    <constraint firstAttribute="width" constant="132" id="DHq-Jz-ica"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="xBL-ZW-CgV">
-                                <rect key="frame" x="215" y="392.66666666666669" width="129.66666666666663" height="58.666666666666686"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiw-6w-KxT">
-                                        <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="29.333333333333332"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Ecommerce">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="23" name="MarkPro-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaV-Cs-o29">
-                                        <rect key="frame" x="0.0" y="29.333333333333314" width="94" height="29.333333333333329"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Concept">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="23" name="MarkPro-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhH-xt-Hns">
+                                <rect key="frame" x="153" y="385" width="186" height="74"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Ecommerce Concept"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="0.013099778443574905" green="0.0" blue="0.21845075488090515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xBL-ZW-CgV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="26o-aa-cAU"/>
-                            <constraint firstItem="xBL-ZW-CgV" firstAttribute="leading" secondItem="C5m-Ew-nzs" secondAttribute="trailing" constant="-80" id="AbB-xH-YTa"/>
                             <constraint firstItem="C5m-Ew-nzs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UJj-1T-1vm"/>
-                            <constraint firstItem="xBL-ZW-CgV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tlW-iD-t3F"/>
+                            <constraint firstItem="NhH-xt-Hns" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eIG-gw-KKE"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="NhH-xt-Hns" secondAttribute="trailing" constant="51" id="gLg-N2-gx0"/>
                             <constraint firstItem="C5m-Ew-nzs" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zYm-7H-ocj"/>
                         </constraints>
                     </view>
@@ -76,6 +49,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Ecommerce Concept" width="162" height="60"/>
         <image name="circle.fill" catalog="system" width="128" height="123"/>
     </resources>
 </document>

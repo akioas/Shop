@@ -32,18 +32,7 @@ struct BestSeller: View {
                                     Coordinator.push(view: ProductDetailsView())
                                 })
                                 {
-                                    
-                                    AsyncImage(
-                                        url: URL(string: (bestSeller[index].picture)),
-                                        content: { image in
-                                            image.resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(maxWidth: 100, maxHeight: 100)
-                                        },
-                                        placeholder: {
-                                            ProgressView()
-                                        }
-                                    )
+                                    CachedImage(url: URL(string: (bestSeller[index].picture)))
                                 }
                                 Text(String(bestSeller[index].id))
                             }

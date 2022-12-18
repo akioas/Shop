@@ -10,14 +10,7 @@ struct ProductDetailsTopBar: View {
             
             Spacer()
             
-            Button(action: {
-                Coordinator.pop()
-            })
-            {
-                Image(systemName: "arrow.left")
-                    .foregroundColor(.green)
-                
-            }
+            BackButton()
             
             Spacer()
             

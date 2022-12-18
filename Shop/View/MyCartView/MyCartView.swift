@@ -12,20 +12,17 @@ struct MyCartView: View {
             Color("Background")
                 .ignoresSafeArea()
             VStack {
-                Button {
-                    Coordinator.pop()
-                } label: {
-                    Image(systemName: "arrow.left")
-                        .foregroundColor(.blue)
-                    
-                }
+                MyCartTopBar()
                 
-                .onAppear {
-                    viewModel.getData()
-                }
-                Text(viewModel.viewData?.basket?.first?.images ?? "CART")
+                MyCartDescription(data: $viewModel.cartData, basketCount: $viewModel.basketCount)
+                
             }
-            .padding()
+            
+        }
+        .onAppear {
+            if viewModel.cartData == nil {
+                viewModel.getData()
+            }
         }
     }
         
