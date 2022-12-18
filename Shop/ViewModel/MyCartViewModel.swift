@@ -5,7 +5,7 @@ import Foundation
 class MyCartViewModel: ObservableObject {
     
     @Published var cartData: MyCartData?
-    @Published var basketCount = [Int : Int]()
+    @Published var basketCount = [Int : Int]() //[id : count]
     
     private let apiManager: APIManager = APIManager()
     
@@ -15,26 +15,19 @@ class MyCartViewModel: ObservableObject {
             switch result {
             case .success(let result):
                 self.cartData = result
-                /*
-                var ids = [Int]()
-
-                if let items = result.basket {
-                    for item in items {
-                        ids.append(item.id)
-                    }
-                }
-                for id in ids {
-                    for newId in ids {
-                        if id == newId {
-                            self.basketCount[id] = (self.basketCount[id] ?? 0) + 1
-                        }
-                    }
-                }
-                 */
+                self.getBasketCount()
+                print(self.basketCount)
                 
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+    
+    func getBasketCount() {
+        if let ids = self.cartData?.basket?.compactMap( { $0.id } ) {
+            self.basketCount = ids.reduce(into: [:]) {
+                      counts, id in  counts[id, default: 0] += 1  }
         }
     }
 }
