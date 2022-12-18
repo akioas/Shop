@@ -14,7 +14,9 @@ struct MainView: View {
         ZStack {
             Color("Background")
                 .ignoresSafeArea()
-            VStack {
+            VStack(spacing: 0) {
+                
+                Spacer(minLength: 79)
                 
                 MainTopBar(isShowing: $isShowingSettings)
                 
@@ -31,12 +33,14 @@ struct MainView: View {
                 }
                 
             }
-            .padding()
             
             if !isEditing {
                 Settings(isShowing: $isShowingSettings)
             }
         }
+        .ignoresSafeArea()
+
+        
         .onAppear {
             if (viewModel.bestSeller == nil || viewModel.homeStore == nil) {
                 viewModel.getData()
