@@ -10,8 +10,8 @@ struct BackButton: View {
             Coordinator.pop()
         })
         {
-            Image(systemName: "arrow.left")
-                .foregroundColor(.green)
+            Image(systemName: "chevron.left.square.fill")
+                .foregroundColor(Color("Blue"))
             
         }
         
