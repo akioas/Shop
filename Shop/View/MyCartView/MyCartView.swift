@@ -20,7 +20,9 @@ struct MyCartView: View {
             
         }
         .onAppear {
-            viewModel.getData()
+            if viewModel.cartData == nil {
+                viewModel.getData()
+            }
         }
     }
         
