@@ -156,9 +156,9 @@
 		4A6FACB3294B87710035858E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				4A6FACB4294B878E0035858E /* MarkPro-Bold.ttf */,
 				4A6FACB0294B85170035858E /* MarkPro.ttf */,
 				4A6FACB6294B87C90035858E /* MarkPro-Heavy.ttf */,
-				4A6FACB4294B878E0035858E /* MarkPro-Bold.ttf */,
 				4A6FACB5294B87C10035858E /* MarkPro-Medium.ttf */,
 			);
 			path = Fonts;

@@ -12,7 +12,7 @@ struct SelectCategory: View {
             HStack {
                 
                 Text("Select Category")
-                    .font(.largeTitle)
+                    .font(.custom("MarkPro-Bold", size: 30))
                 
                 Spacer()
                 
