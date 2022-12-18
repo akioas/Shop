@@ -8,13 +8,17 @@ struct ProductDescription: View {
     
     var body: some View {
         
-        ProductDescriptionTitle(data: $data)
-        
-        ProductDescriptionShop(data: $data)
-        
-        SelectColorCapacity(data: $data)
-        
-        AddToCart(data: $data)
+        VStack {
+            
+            ProductDescriptionTitle(data: $data)
+            
+            ProductDescriptionShop(data: $data)
+            
+            SelectColorCapacity(data: $data)
+            
+            AddToCart(data: $data)
+            
+        }
         
     }
 }

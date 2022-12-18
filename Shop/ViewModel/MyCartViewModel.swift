@@ -16,7 +16,6 @@ class MyCartViewModel: ObservableObject {
             case .success(let result):
                 self.cartData = result
                 self.getBasketCount()
-                print(self.basketCount)
                 
             case .failure(let error):
                 print(error)
@@ -24,7 +23,7 @@ class MyCartViewModel: ObservableObject {
         }
     }
     
-    func getBasketCount() {
+    private func getBasketCount() {
         if let ids = self.cartData?.basket?.compactMap( { $0.id } ) {
             self.basketCount = ids.reduce(into: [:]) {
                       counts, id in  counts[id, default: 0] += 1  }

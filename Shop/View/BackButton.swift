@@ -11,10 +11,11 @@ struct BackButton: View {
         })
         {
             Image(systemName: "chevron.left.square.fill")
+                .resizable()
                 .foregroundColor(Color("Blue"))
-            
         }
-        
+        .frame(width: iconX, height: iconY)
+
     }
     
 }

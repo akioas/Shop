@@ -15,7 +15,7 @@ class APIManager {
     }
     
     private var subscriber = Set<AnyCancellable>()
-    let decoder: JSONDecoder
+    private let decoder: JSONDecoder
     init() {
         decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
