@@ -27,21 +27,26 @@ struct MainView: View {
                     MainTopBar(isShowing: $isShowingSettings)
                     
                     Spacer()
-                    //отступ
+                        .frame(height: 24)
                     
                     SelectCategory()
-                    //отступ
                     
+                    Spacer()
+                        .frame(height: 35)
+
                     
                     SearchBar(text: $searchText, isEditing: $isEditing)
-                    //отступ
                     
+                    Spacer()
+                        .frame(height: 24)
+
                     
-                    HotSales(homeStore: $viewModel.homeStore)
+                    HotSales(homeStore: $viewModel.homeStore, isShowingSettings: $isShowingSettings)
                     
+                    Spacer()
+                        .frame(height: 11)
+
                     BestSeller(bestSeller: $viewModel.bestSeller)
-                    
-                    
                     
                 }
                 Spacer()
@@ -58,7 +63,11 @@ struct MainView: View {
             
             
             if !isEditing {
-                Settings(isShowing: $isShowingSettings)
+                VStack {
+                    Spacer()
+                    Settings(isShowing: $isShowingSettings)
+                        .frame(height: 435, alignment: .bottom)
+                }
             }
         }
         .ignoresSafeArea()

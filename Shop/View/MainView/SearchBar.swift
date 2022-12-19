@@ -11,15 +11,14 @@ struct SearchBar: View {
             ZStack {
                 
                 HStack{
-                    Spacer()
-                    //space
-                    //font
-                    //size, radius
+                    
                     TextField("Search", text: $text)
                         .padding(7)
-                        .padding(.horizontal, 25)
-                        .background(Color(.systemGray6))
-                        .cornerRadius(8)
+                        .padding(.horizontal, 38)
+                        .background(Color(.white))
+                        .foregroundColor(Color("Blue"))
+                        .font(.custom("MarkPro", size: 12))
+                        .cornerRadius(viewRadius)
                         .padding(.horizontal, 10)
                         .onTapGesture {
                             self.isEditing = true
@@ -40,25 +39,21 @@ struct SearchBar: View {
                             Color("Orange")
                                 .frame(width: 30, height:30)
                                 .cornerRadius(36)
-                            //size
                             Button(action: {}) {
                                 Image("Search")
                                     .foregroundColor(.white)
-                                //size
                                 
                             }
                         }
                         Spacer()
-                        //size
                     }
                 }
                 HStack {
                     Spacer()
-                        .frame(width: 20)
-                    //отступ
-                    Image(systemName: "magnifyingglass")
+                        .frame(width: 24)
+                    Image("Glass")
                         .foregroundColor(Color("Orange"))
-                    //icon
+                        .opacity(0.7)
                     Spacer()
                 }
             }

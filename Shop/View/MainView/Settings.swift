@@ -33,16 +33,12 @@ struct Settings: View {
                                 .foregroundColor(.accentColor)
                         }
                     }
-                    .padding(.top, 500)
 
                     Color.red
                         .ignoresSafeArea()
-                    
-                    
                 }
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .ignoresSafeArea()
     }
 }

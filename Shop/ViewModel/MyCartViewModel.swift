@@ -23,7 +23,7 @@ class MyCartViewModel: ObservableObject {
         }
     }
     
-    private func getBasketCount() {
+    func getBasketCount() {
         if let ids = self.cartData?.basket?.compactMap( { $0.id } ) {
             self.basketCount = ids.reduce(into: [:]) {
                       counts, id in  counts[id, default: 0] += 1  }

@@ -14,13 +14,17 @@ struct BestSeller: View {
             HStack {
                 
                 Text("Best Seller")
-                    .font(.largeTitle)
+                    .font(.custom("MarkPro-Bold", size: 25))
+                    .foregroundColor(Color("Blue"))
+
                 //font
                 
                 Spacer()
                 
                 Text("see more")
                     .foregroundColor(Color("Orange"))
+                    .font(.custom("MarkPro", size: 15))
+
                 Spacer()
                     .frame(width: 10)
                 //size, font
