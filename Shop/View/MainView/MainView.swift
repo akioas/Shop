@@ -11,36 +11,58 @@ struct MainView: View {
     @State var isEditing = false
     
     var body: some View {
+        
         ZStack {
+            
             Color("Background")
                 .ignoresSafeArea()
-            VStack(spacing: 0) {
-                
-                Spacer(minLength: 79)
-                
-                MainTopBar(isShowing: $isShowingSettings)
-                
-                SelectCategory()
-                
-                SearchBar(text: $searchText, isEditing: $isEditing)
-                
-                HotSales(homeStore: $viewModel.homeStore)
-                
-                BestSeller(bestSeller: $viewModel.bestSeller)
-                
-                if !isShowingSettings {
+            HStack {
+                Spacer()
+                    .frame(width: 17)
+                VStack(spacing: 0) {
+                    
+                    Spacer()
+                        .frame(height: 79)
+                    
+                    MainTopBar(isShowing: $isShowingSettings)
+                    
+                    Spacer()
+                    //отступ
+                    
+                    SelectCategory()
+                    //отступ
+                    
+                    
+                    SearchBar(text: $searchText, isEditing: $isEditing)
+                    //отступ
+                    
+                    
+                    HotSales(homeStore: $viewModel.homeStore)
+                    
+                    BestSeller(bestSeller: $viewModel.bestSeller)
+                    
+                    
+                    
+                }
+                Spacer()
+                    .frame(width: 17)
+            }
+            
+            if !isShowingSettings {
+                VStack{
+                    Spacer()
                     Explorer()
                 }
-                
+                    
             }
+            
             
             if !isEditing {
                 Settings(isShowing: $isShowingSettings)
             }
         }
         .ignoresSafeArea()
-
-        
+     
         .onAppear {
             if (viewModel.bestSeller == nil || viewModel.homeStore == nil) {
                 viewModel.getData()

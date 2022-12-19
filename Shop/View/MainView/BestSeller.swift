@@ -15,11 +15,15 @@ struct BestSeller: View {
                 
                 Text("Best Seller")
                     .font(.largeTitle)
+                //font
                 
                 Spacer()
                 
                 Text("see more")
                     .foregroundColor(Color("Orange"))
+                Spacer()
+                    .frame(width: 10)
+                //size, font
                 
             }
             

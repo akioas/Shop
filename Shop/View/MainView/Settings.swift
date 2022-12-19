@@ -6,9 +6,10 @@ struct Settings: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
+            
             if (isShowing) {
+                
                 VStack {
-                    
                     
                     HStack {
                         
@@ -19,7 +20,6 @@ struct Settings: View {
                             Image(systemName: "ant")
                                 .imageScale(.large)
                                 .foregroundColor(.accentColor)
-                            
                         }
                         
                         Spacer()
@@ -31,12 +31,10 @@ struct Settings: View {
                             Image(systemName: "person")
                                 .imageScale(.large)
                                 .foregroundColor(.accentColor)
-                            
                         }
                     }
                     .padding(.top, 500)
 
-                    
                     Color.red
                         .ignoresSafeArea()
                     

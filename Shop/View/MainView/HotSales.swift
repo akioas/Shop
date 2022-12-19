@@ -8,7 +8,6 @@ struct HotSales: View {
     @Binding var homeStore: [HomeStoreData]?
     @State private var index = 0
     
-    
     var body: some View {
         
         VStack {
@@ -17,14 +16,17 @@ struct HotSales: View {
                 
                 Text("Hot Sales")
                     .font(.largeTitle)
+                //font
                 
                 Spacer()
                 
                 Text("see more")
                     .foregroundColor(Color("Orange"))
+                Spacer()
+                    .frame(width: 10)
+                //size, font
                 
             }
-            
             
             HStack(spacing: 5) {
                 if let homeStore = homeStore {
@@ -40,7 +42,7 @@ struct HotSales: View {
                                     CachedImage(url: URL(string: (homeStore[index].picture)))
                                 }
                                 Text(String(homeStore[index].id))
-
+                                
                             }
                         }
                     }

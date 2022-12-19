@@ -9,7 +9,10 @@ struct MyCartView: View {
     
     var body: some View {
         ZStack{
-            Color("Background")
+            VStack {
+                Color("Background")
+                Color("Blue")
+            }
                 .ignoresSafeArea()
             VStack {
                 MyCartTopBar()

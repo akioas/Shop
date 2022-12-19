@@ -32,14 +32,12 @@ struct ProductDescriptionTitle: View {
     var body: some View {
         if let data = data {
             
-            
             HStack {
                 VStack {
                     Text(data.title)
                         .font(.title2)
                     
                     HStack {
-                        
                         
                         ForEach((0..<Int(data.rating)), id: \.self) { star in
                             Image(systemName: "star.fill")
@@ -54,8 +52,6 @@ struct ProductDescriptionTitle: View {
                         ForEach((Int(data.rating)..<maxStars), id: \.self) { star in
                             Image(systemName: "star")
                         }
-                        
-                        
                     }
                 }
                 Spacer()
@@ -100,9 +96,7 @@ struct ProductDescriptionShop: View {
                         Text(data.sd)
                     }
                 }
-                
             }
-            
         }
     }
 }
@@ -148,9 +142,7 @@ struct SelectColorCapacity: View {
                 }
             }
         }
-        
     }
-    
 }
 
 
@@ -158,21 +150,20 @@ struct SelectColorCapacity: View {
 struct AddToCart: View {
     
     @Binding var data: ProductDetailsData?
-
+    
     var body: some View {
         ZStack {
             Rectangle()
                 .foregroundColor(Color("Orange"))
             HStack {
                 Spacer()
-
+                
                 Text("Add to Cart")
                 Spacer()
                 if let price = data?.price {
                     Text("$" + String(price))
                 }
                 Spacer()
-
             }
             .foregroundColor(Color.white)
         }
