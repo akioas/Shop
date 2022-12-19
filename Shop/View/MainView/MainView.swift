@@ -66,7 +66,7 @@ struct MainView: View {
                 VStack {
                     Spacer()
                     Settings(isShowing: $isShowingSettings)
-                        .frame(height: 435, alignment: .bottom)
+                        .frame(height: 375, alignment: .bottom)
                 }
             }
         }

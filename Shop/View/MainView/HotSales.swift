@@ -27,7 +27,7 @@ struct HotSales: View {
                 
                 Spacer()
                     .frame(width: 10)
-                
+      
             }
             
             if !isShowingSettings {
@@ -54,98 +54,92 @@ struct Tabs: View {
                 TabView(selection: $index) {
                     ForEach((0..<homeStore.count), id: \.self) { index in
                         
-                        
-                        Button(action: {
-                            Coordinator.push(view: ProductDetailsView())
-                        })
-                        {
-                            ZStack {
+                        ZStack{
+                            Button(action: {
+                                Coordinator.push(view: ProductDetailsView())
+                            })
+                            {
                                 CachedImage(url: URL(string: (homeStore[index].picture)))
-                                    
+                                    .frame(height: 182)
+                                    .cornerRadius(10)
+                            }
+                            HStack {
+                                Spacer()
+                                    .frame(width: 25)
                                 
-                                HStack {
-                                    Spacer()
-                                        .frame(width: 25)
-                                    
-                                    VStack {
-                                        if homeStore[index].isNew ?? false {
-                                            Spacer()
-                                                .frame(height: 14)
-                                            HStack {
-                                                ZStack {
-                                                    Color("Orange")
-                                                        .frame(width: 27, height: 27)
-                                                        .cornerRadius(14)
-                                                    Text("New")
-                                                        .font(.system(size: 10, weight: .heavy))
-                                                        .foregroundColor(.white)
-                                                    
-                                                }
-                                                Spacer()
-                                            }
-                                        } else {
-                                            HStack {
-                                                Spacer()
-                                                    .frame(height: 41)
-                                                Text(" ")
+                                VStack {
+                                    if homeStore[index].isNew ?? false {
+                                        Spacer()
+                                            .frame(height: 14)
+                                        HStack {
+                                            ZStack {
+                                                Color("Orange")
+                                                    .frame(width: 27, height: 27)
+                                                    .cornerRadius(14)
+                                                Text("New")
                                                     .font(.system(size: 10, weight: .heavy))
+                                                    .foregroundColor(.white)
+                                                
                                             }
+                                            Spacer()
                                         }
+                                    } else {
+                                        Spacer()
+                                            .frame(height: 23)
+                                    }
+                                        Spacer()
+                                            .frame(height: 18)
+                                        HStack {
+                                            Text(homeStore[index].title)
+                                                .font(.system(size: 25, weight: .heavy))
+                                                .foregroundColor(.white)
                                             Spacer()
-                                                .frame(height: 18)
-                                            HStack {
-                                                Text(homeStore[index].title)
-                                                    .font(.system(size: 25, weight: .heavy))
-                                                    .foregroundColor(.white)
-                                                Spacer()
-                                            }
+                                        }
+                                        Spacer()
+                                            .frame(height: 5)
+                                        HStack {
+                                            Text(homeStore[index].subtitle)
+                                                .font(.system(size: 12))
+                                                .foregroundColor(.white)
                                             Spacer()
-                                                .frame(height: 5)
+                                        }
+                                        Spacer()
+                                            .frame(height: 26)
+                                        if homeStore[index].isBuy {
                                             HStack {
-                                                Text(homeStore[index].subtitle)
-                                                    .font(.system(size: 12))
-                                                    .foregroundColor(.white)
+                                                Button(action: {}) {
+                                                    ZStack {
+                                                        Color.white
+                                                            .cornerRadius(5)
+                                                            .frame(width: 98, height: 23, alignment: .center)
+                                                        Text("Buy now!")
+                                                            .font(.system(size: 11, weight: .heavy))
+                                                            .foregroundColor(Color("Blue"))
+                                                    }
+                                                }
                                                 Spacer()
                                             }
                                             Spacer()
                                                 .frame(height: 26)
-                                            if homeStore[index].isBuy {
-                                                HStack {
-                                                    Button(action: {}) {
-                                                        ZStack {
-                                                            Color.white
-                                                                .cornerRadius(5)
-                                                                .frame(width: 98, height: 23, alignment: .center)
-                                                            Text("Buy now!")
-                                                                .font(.system(size: 11, weight: .heavy))
-                                                                .foregroundColor(Color("Blue"))
-                                                        }
-                                                    }
-                                                    Spacer()
-                                                }
-                                                Spacer()
-                                                    .frame(height: 26)
-                                            } else {
-                                                Spacer()
-                                                    .frame(height: 23)
-                                            }
+                                        } else {
                                             Spacer()
+                                                .frame(height: 23)
                                         }
+                                        Spacer()
                                     }
-                                    Spacer()
                                 }
-                            }
-                        
+                                Spacer()
+                            
                         }
                     }
-                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                } else {
-                    Color.white
-                        .frame(height: 182)
-                        .cornerRadius(10)
                 }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            } else {
+                Color.white
+                    .frame(height: 182)
+                    .cornerRadius(10)
+            }
         }
-    
     }
 }
 
