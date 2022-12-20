@@ -54,7 +54,7 @@ struct Explorer: View {
         }
         .foregroundColor(.white)
         .frame(height: 72.0)
-        .cornerRadius(viewRadius)
+        .cornerRadius(10)
     }
     
 }

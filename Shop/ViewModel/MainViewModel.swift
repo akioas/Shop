@@ -8,6 +8,7 @@ class MainViewModel: ObservableObject {
     @Published var homeStore: [HomeStoreData]?
     
     private let apiManager: APIManager = APIManager()
+    private let mainInfo: MainInfo = MainInfo()
     
     func getData() {
         
@@ -21,4 +22,17 @@ class MainViewModel: ObservableObject {
             }
         }
     }
+    
+    func getBrands() -> [String] {
+        mainInfo.brandList
+    }
+    
+    func getPrice() -> [String] {
+        mainInfo.priceList
+    }
+    
+    func getSize() -> [String] {
+        mainInfo.sizeList
+    }
+    
 }

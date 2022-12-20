@@ -10,14 +10,18 @@ struct BackButton: View {
             Coordinator.pop()
         })
         {
-            Image(systemName: "chevron.left.square.fill")
-                .resizable()
-                .foregroundColor(Color("Blue"))
+            ZStack {
+                Image("Rectangle")
+                    .resizable()
+                    .frame(width: 37, height: 37)
+                    .foregroundColor(Color("Blue"))
+                Image("Back")
+                    .resizable()
+                    .frame(width: 9, height: 16)
+                    .foregroundColor(Color.white)
+            }
         }
-        .frame(width: iconX, height: iconY)
-
-    }
-    
+    }    
 }
 
 

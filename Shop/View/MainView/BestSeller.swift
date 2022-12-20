@@ -77,8 +77,7 @@ struct BestSeller: View {
                                         
                                         BestSellerFavorite(isFavorites: bestSeller[index].isFavorites)
                                     }
-                                    Spacer()
-                                        .frame(width: separator)
+                                    
                                 }
                                 
                             }

@@ -18,7 +18,7 @@ struct SearchBar: View {
                         .background(Color(.white))
                         .foregroundColor(Color("Blue"))
                         .font(.custom("MarkPro", size: 12))
-                        .cornerRadius(viewRadius)
+                        .cornerRadius(30)
                         .padding(.horizontal, 10)
                         .onTapGesture {
                             self.isEditing = true
