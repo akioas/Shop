@@ -12,12 +12,10 @@ struct Explorer: View {
                 Spacer(minLength: 68.0)
                 
                 Text("•")
-                    .foregroundColor(Color.white)
                     .fontWeight(.bold)
                     .font(.title)
                 
                 Text(" Explorer")
-                    .foregroundColor(Color.white)
                     .font(.custom("MarkPro-Bold", size: 15))
                     .fontWeight(.bold)
                 
@@ -29,7 +27,6 @@ struct Explorer: View {
                 {
                     Image("Cart")
                         .imageScale(.large)
-                        .foregroundColor(.accentColor)
                         .frame(width: 18.0, height: 17.6)
                 }
                 
@@ -39,7 +36,6 @@ struct Explorer: View {
                 {
                     Image("Heart")
                         .imageScale(.large)
-                        .foregroundColor(.accentColor)
                         .frame(width: 19.0, height: 17.0)
                 }
                 
@@ -49,7 +45,6 @@ struct Explorer: View {
                 {
                     Image("Person")
                         .imageScale(.large)
-                        .foregroundColor(.accentColor)
                         .frame(width: 17.6, height: 17.0)
                 }
                 
@@ -57,6 +52,7 @@ struct Explorer: View {
 
             }
         }
+        .foregroundColor(.white)
         .frame(height: 72.0)
         .cornerRadius(viewRadius)
     }

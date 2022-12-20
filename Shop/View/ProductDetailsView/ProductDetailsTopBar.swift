@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct ProductDetailsTopBar: View {
-        
+    
     var body: some View {
         
         HStack {
@@ -15,9 +15,8 @@ struct ProductDetailsTopBar: View {
             Spacer()
             
             Text("Product Details")
-                        
-            Spacer()
             
+            Spacer()
             
             Button(action: {
                 Coordinator.push(view: MyCartView())
@@ -28,11 +27,10 @@ struct ProductDetailsTopBar: View {
                     .foregroundColor(.accentColor)
             }
             
-            
             Spacer()
             
         }
         
     }
-
+    
 }

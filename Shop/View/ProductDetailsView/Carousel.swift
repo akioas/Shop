@@ -125,7 +125,6 @@ struct Carousel: View {
                         }
                         self.x = 0
                     })
-                                 
             )
         }
     }

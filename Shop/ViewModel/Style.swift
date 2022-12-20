@@ -10,6 +10,18 @@ extension Color {
     )}
 }
 
+extension Formatter {
+    static let withSeparator: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = ","
+        return formatter
+    }()
+}
+extension Numeric {
+    var formattedWithSeparator: String { Formatter.withSeparator.string(for: self) ?? "" }
+}
+
 let iconX = 37.0
 let iconY = 37.0
 let viewRadius = 30.0
