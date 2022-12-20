@@ -15,12 +15,12 @@ struct ProductDetailsView: View {
                 VStack {
                     
                     ProductDetailsTopBar()
-                        .frame(height: iconY)
+                        .frame(height: 37)
                     Spacer(minLength: spacerLength)
                     Carousel(images: $viewModel.images)
-                        .frame(height: (reader.size.height - spacerLength - iconY) / 2)
+                        .frame(height: (reader.size.height - spacerLength - 37) / 2)
                     ProductDescription(data: $viewModel.productDetailsData)
-                        .frame(height: (reader.size.height - spacerLength - iconY) / 2)
+                        .frame(height: (reader.size.height - spacerLength - 37) / 2)
                 }
                 
             }

@@ -22,7 +22,4 @@ extension Numeric {
     var formattedWithSeparator: String { Formatter.withSeparator.string(for: self) ?? "" }
 }
 
-let iconX = 37.0
-let iconY = 37.0
-let viewRadius = 30.0
-let iconRadius = 10.0
+
