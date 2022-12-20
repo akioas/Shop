@@ -55,22 +55,18 @@ struct Tabs: View {
                     ForEach((0..<homeStore.count), id: \.self) { index in
                         
                         ZStack{
-                            Button(action: {
-                                Coordinator.push(view: ProductDetailsView())
-                            })
-                            {
+                            
                                 CachedImage(url: URL(string: (homeStore[index].picture)))
                                     .frame(height: 182)
                                     .cornerRadius(10)
-                            }
+                            
                             HStack {
                                 Spacer()
                                     .frame(width: 25)
                                 
                                 VStack {
                                     if homeStore[index].isNew ?? false {
-                                        Spacer()
-                                            .frame(height: 14)
+                                        Spacer(minLength: 14)
                                         HStack {
                                             ZStack {
                                                 Color("Orange")
@@ -107,7 +103,10 @@ struct Tabs: View {
                                             .frame(height: 26)
                                         if homeStore[index].isBuy {
                                             HStack {
-                                                Button(action: {}) {
+                                                Button(action: {
+                                                    Coordinator.push(view: ProductDetailsView())
+                                                })
+                                                {
                                                     ZStack {
                                                         Color.white
                                                             .cornerRadius(5)
@@ -135,7 +134,8 @@ struct Tabs: View {
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             } else {
-                Color.white
+                //no data
+                Color(hex: "#efefef")
                     .frame(height: 182)
                     .cornerRadius(10)
             }

@@ -22,7 +22,7 @@ final class ShopTests: XCTestCase {
 
     func testBasketCount() throws {
         let basket = [Basket(id: 1, images: "", price: 100, title: "11"),
-                      Basket(id: 3, images: "", price: 200, title: "-"),
+                        Basket(id: 3, images: "", price: 200, title: "-"),
                       Basket(id: 3, images: "", price: 200, title: "-")]
         let cartData = MyCartData(basket: basket, delivery: "Free", id: "9", total: 99)
         let basketCount = [1 : 1, 3 : 2]

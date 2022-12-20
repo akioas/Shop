@@ -127,7 +127,6 @@
 				4A7103DA294E3523000115A9 /* MyCartView */,
 				4A9EAF7A294E012200767997 /* CachedImage.swift */,
 				4A7103D8294E34F3000115A9 /* BackButton.swift */,
-				4A9EAF80294E111000767997 /* Style.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +139,7 @@
 				4A66A278294A5EE20058EAA6 /* MainViewModel.swift */,
 				4A66A27A294A5F180058EAA6 /* ProductViewModel.swift */,
 				4A66A27C294A5F380058EAA6 /* MyCartViewModel.swift */,
+				4A9EAF80294E111000767997 /* Style.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

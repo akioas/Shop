@@ -11,6 +11,8 @@ struct SelectCategory: View {
         VStack {
             
             HStack {
+                Spacer()
+                    .frame(width: 17)
                 
                 Text("Select Category")
                     .font(.custom("MarkPro-Bold", size: 25))
@@ -24,7 +26,7 @@ struct SelectCategory: View {
                 }
                 
                 Spacer()
-                    .frame(width: 18)
+                    .frame(width: 35)
             }
             
             Categories()
@@ -43,7 +45,7 @@ struct Categories: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 Spacer()
-                    .frame(width: 4)
+                    .frame(width: 21)
                 HStack(spacing: 23) {
                     ForEach(categories, id: \.self) { category in
                         VStack {
