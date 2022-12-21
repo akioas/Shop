@@ -13,7 +13,7 @@ struct Settings: View {
                     .ignoresSafeArea()
                     .cornerRadius(30)
                     .shadow(
-                        color: Color.gray,
+                        color: Color(hex: "#4C5F8F1A").opacity(0.9),
                         radius: 8.0
                     )
                 
@@ -83,6 +83,7 @@ struct Settings: View {
 struct Filter: View {
     
     private var viewModel = MainViewModel()
+    
     @State var brandList: [String] = [""]
     @State var priceList: [String] = [""]
     @State var sizeList: [String] = [""]

@@ -5,7 +5,6 @@ import SwiftUI
 
 struct SelectCategory: View {
     
-    
     var body: some View {
         
         VStack {
@@ -38,8 +37,10 @@ struct SelectCategory: View {
 
 struct Categories: View {
     
-    private let categories = ["Phones", "Computer", "Health", "Books", " "]
-    @State var selectedCategory = "Phones"
+    @State var categories = [""]
+    @State var selectedCategory = ""
+    
+    private let viewModel = MainViewModel()
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -98,6 +99,10 @@ struct Categories: View {
                 }
             }
         }
+        .onAppear(perform: {
+            self.categories = viewModel.getCategories()
+            self.selectedCategory = categories.first ?? ""
+        })
     }
 }
 

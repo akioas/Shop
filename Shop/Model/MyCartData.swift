@@ -15,3 +15,8 @@ struct Basket: Decodable {
     var price: Int
     var title: String
 }
+
+class Repository {
+    static let shared = Repository()
+    var basketItemsCount: Int?
+}

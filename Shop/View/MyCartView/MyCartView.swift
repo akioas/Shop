@@ -17,7 +17,7 @@ struct MyCartView: View {
             VStack {
                 MyCartTopBar()
                 
-                MyCartDescription(data: $viewModel.cartData, basketCount: $viewModel.basketCount)
+                MyCartDescription(data: $viewModel.cartData, basketCount: $viewModel.basketCountDict)
                 
             }
             
