@@ -9,19 +9,23 @@ struct MyCartView: View {
     
     var body: some View {
         ZStack{
-            VStack {
                 Color("Background")
-                Color("Blue")
-            }
-                .ignoresSafeArea()
             VStack {
+                
+                Spacer()
+                    .frame(height: 79)
+                
                 MyCartTopBar()
+                
+                Spacer()
+                    .frame(height: 49)
                 
                 MyCartDescription(data: $viewModel.cartData, basketCount: $viewModel.basketCountDict)
                 
             }
             
         }
+        .ignoresSafeArea()
         .onAppear {
             if viewModel.cartData == nil {
                 viewModel.getData()

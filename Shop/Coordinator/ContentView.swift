@@ -9,7 +9,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             coordinator.container.view
-                .transition(.move(edge: .trailing))
+                .transition(.push(from: .bottom))
         }
         .preferredColorScheme(.light)
     }
