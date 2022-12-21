@@ -30,4 +30,6 @@ class MainInfo {
     let priceList = ["$0 - $300", "$300 - $500", "$500 - $1,000",
                              "$1,000 - $5,000", "$5,000 - $10,000"]
     let sizeList = ["4.5 to 5.5 inches"]
+    
+    let categories = ["Phones", "Computer", "Health", "Books", " "]
 }

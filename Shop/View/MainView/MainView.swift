@@ -6,6 +6,7 @@ import SwiftUI
 struct MainView: View {
     
     @ObservedObject private var viewModel = MainViewModel()
+    @ObservedObject private var cartViewModel = MyCartViewModel()
     @State var isShowingSettings = false
     @State var searchText = ""
     @State var isEditing = false
@@ -65,7 +66,7 @@ struct MainView: View {
             if !isShowingSettings {
                 VStack{
                     Spacer()
-                    Explorer()
+                    Explorer(count: $cartViewModel.basketItemsCount)
                 }.ignoresSafeArea()
                 
             }
@@ -85,6 +86,7 @@ struct MainView: View {
             if (viewModel.bestSeller == nil || viewModel.homeStore == nil) {
                 viewModel.getData()
             }
+            cartViewModel.getData()
             isShowingSettings = false
         }
     }

@@ -140,7 +140,7 @@ struct BestSellerFavorite: View {
                         .frame(width: 25, height: 25)
                         .cornerRadius(13)
                         .shadow(
-                            color: Color.gray.opacity(0.5),
+                            color: Color(hex: "#4C5F8F1A").opacity(0.9),
                             radius: 1.0 )
                     Button(action: {}) {
                         if isFavorites {

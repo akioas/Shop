@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct Explorer: View {
-        
+    @Binding var count: Int?
     var body: some View {
         ZStack{
             Color("Blue")
@@ -25,9 +25,20 @@ struct Explorer: View {
                     Coordinator.push(view: MyCartView())
                 })
                 {
-                    Image("Cart")
-                        .imageScale(.large)
-                        .frame(width: 18.0, height: 17.6)
+                    ZStack {
+                        Image("Cart")
+                            .imageScale(.large)
+                            .frame(width: 18.0, height: 17.6)
+                        VStack {
+                            Spacer()
+                                .frame(height: 2)
+                            if (count ?? 0) > 0 {
+                                Text((count ?? 0).formattedWithSeparator)
+                                    .font(.custom("MarkPro", size: 8))
+                                    .foregroundColor(.white)
+                            }
+                        }
+                    }
                 }
                 
                 Spacer()
@@ -55,12 +66,7 @@ struct Explorer: View {
         .foregroundColor(.white)
         .frame(height: 72.0)
         .cornerRadius(10)
+        
     }
     
-}
-
-struct Explorer_Previews: PreviewProvider {
-    static var previews: some View {
-        Explorer()
-    }
 }

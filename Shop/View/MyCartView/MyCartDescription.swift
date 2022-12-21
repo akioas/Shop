@@ -39,7 +39,7 @@ struct MyCartDescription: View {
                         }
                         Spacer()
                     }
-                        
+                    
                     
                     
                     Spacer()
@@ -63,7 +63,7 @@ struct MyCartDescription: View {
                 }
                 
             }                            .foregroundColor(Color(.white))
-
+            
         }
     }
 }

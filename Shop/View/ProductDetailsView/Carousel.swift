@@ -28,11 +28,6 @@ struct Carousel: View {
                             .padding(.leading, radius)
                             .cornerRadius(radius)
                             .padding(.leading, -radius)
-                            .shadow(
-                                color: Color.gray.opacity(0.55),
-                                radius: 8,
-                                y: 8
-                            )
                         
                     } else {
                         Color(.clear)
@@ -46,7 +41,7 @@ struct Carousel: View {
                         .aspectRatio(contentMode: .fill)
                         .cornerRadius(radius)
                         .shadow(
-                            color: Color.gray.opacity(0.55),
+                            color: Color(hex: "#4C5F8F1A").opacity(0.2),
                             radius: 8,
                             y: 8
                         )
@@ -63,9 +58,10 @@ struct Carousel: View {
                             .cornerRadius(radius)
                             .padding(.trailing, -radius)
                             .shadow(
-                                color: Color.gray.opacity(0.55),
-                                radius: 8,
-                                y: 8
+                                color: Color(hex: "#4C5F8F1A").opacity(0.5),
+                                radius: 4,
+                                x: 5,
+                                y: 4
                             )
                         
                     } else {
@@ -80,9 +76,9 @@ struct Carousel: View {
                         .frame(width: reader.size.width * imagewidth, height: reader.size.height)
                         .cornerRadius(radius)
                         .shadow(
-                            color: Color.gray.opacity(0.55),
-                            radius: 8,
-                            y: 8
+                            color: Color(hex: "#4C5F8F1A").opacity(0.5),
+                            radius: 4,
+                            y: 4
                         )
                     Spacer(minLength: reader.size.width * (spacerWidth + smallImageWidth))
                 }

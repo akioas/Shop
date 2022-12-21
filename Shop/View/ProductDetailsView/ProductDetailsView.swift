@@ -6,24 +6,35 @@ import SwiftUI
 struct ProductDetailsView: View {
     
     @ObservedObject private var viewModel = ProductViewModel()
+
     private let spacerLength = 30.0
+    
     var body: some View {
         GeometryReader { reader in
             ZStack{
+                
                 Color("Background")
-                    .ignoresSafeArea()
+                
                 VStack {
                     
+                    Spacer()
+                        .frame(height: 79)
+                    
                     ProductDetailsTopBar()
-                        .frame(height: 37)
-                    Spacer(minLength: spacerLength)
+                    
+                    Spacer()
+                        .frame(height: 30)
+                    
                     Carousel(images: $viewModel.images)
-                        .frame(height: (reader.size.height - spacerLength - 37) / 2)
+                    
+                    Spacer(minLength: 11)
+                    
                     ProductDescription(data: $viewModel.productDetailsData)
-                        .frame(height: (reader.size.height - spacerLength - 37) / 2)
+                    
                 }
                 
             }
+            .ignoresSafeArea()
             .onAppear {
                 if viewModel.productDetailsData == nil {
                     viewModel.getData()

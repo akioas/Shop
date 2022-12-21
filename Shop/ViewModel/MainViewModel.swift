@@ -35,4 +35,8 @@ class MainViewModel: ObservableObject {
         mainInfo.sizeList
     }
     
+    func getCategories() -> [String] {
+        mainInfo.categories
+    }
+    
 }
