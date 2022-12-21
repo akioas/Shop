@@ -73,7 +73,7 @@ struct Tabs: View {
                                                     .frame(width: 27, height: 27)
                                                     .cornerRadius(14)
                                                 Text("New")
-                                                    .font(.system(size: 10, weight: .heavy))
+                                                    .font(.system(size: 10, weight: .bold))
                                                     .foregroundColor(.white)
                                                 
                                             }
@@ -87,7 +87,7 @@ struct Tabs: View {
                                             .frame(height: 18)
                                         HStack {
                                             Text(homeStore[index].title)
-                                                .font(.system(size: 25, weight: .heavy))
+                                                .font(.system(size: 25, weight: .bold))
                                                 .foregroundColor(.white)
                                             Spacer()
                                         }
@@ -112,7 +112,7 @@ struct Tabs: View {
                                                             .cornerRadius(5)
                                                             .frame(width: 98, height: 23, alignment: .center)
                                                         Text("Buy now!")
-                                                            .font(.system(size: 11, weight: .heavy))
+                                                            .font(.system(size: 11, weight: .bold))
                                                             .foregroundColor(Color("Blue"))
                                                     }
                                                 }
