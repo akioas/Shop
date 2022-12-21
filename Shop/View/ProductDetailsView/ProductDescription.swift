@@ -312,6 +312,7 @@ struct SelectColorCapacity: View {
 struct AddToCart: View {
     
     @Binding var data: ProductDetailsData?
+    let currency = "$"
     
     var body: some View {
         ZStack {
@@ -331,7 +332,7 @@ struct AddToCart: View {
                 
                 Text("Add to Cart")
                 Spacer()
-                Text("$" + ((data?.price ?? 0).formattedWithSeparator) + ".00")
+                Text(currency + ((data?.price ?? 0).formattedWithSeparator) + String(format: "%.2f", 0.00))
                 Spacer()
             }
             .font(.custom("MarkPro-Bold", size: 20))

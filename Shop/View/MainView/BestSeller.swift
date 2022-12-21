@@ -8,6 +8,7 @@ struct BestSeller: View {
     @Binding var bestSeller: [BestSellerData]?
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     let separator = 7.0
+    let currency = "$"
     
     var body: some View {
         
@@ -44,7 +45,7 @@ struct BestSeller: View {
                                             HStack {
                                                 Spacer()
                                                     .frame(width: 21)
-                                                Text("$" + bestSeller[index].priceWithoutDiscount.formattedWithSeparator)
+                                                Text(currency + bestSeller[index].priceWithoutDiscount.formattedWithSeparator)
                                                     .foregroundColor(Color("Blue"))
                                                     .font(.custom("MarkPro-Bold", size: 16))
                                                 Spacer()
@@ -52,7 +53,7 @@ struct BestSeller: View {
                                                 VStack {
                                                     Spacer()
                                                         .frame(height: 4)
-                                                    Text("$" + bestSeller[index].discountPrice.formattedWithSeparator)
+                                                    Text(currency + bestSeller[index].discountPrice.formattedWithSeparator)
                                                         .foregroundColor(Color(hex: "#CCCCCC"))
                                                         .font(.custom("MarkPro-Medium", size: 10))
                                                         .frame(alignment: .bottomLeading)
