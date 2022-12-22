@@ -27,7 +27,7 @@ final class ShopTests: XCTestCase {
         let cartData = MyCartData(basket: basket, delivery: "Free", id: "9", total: 99)
         let basketCount = [1 : 1, 3 : 2]
         viewModel.cartData = cartData
-        viewModel.getBasketCount()
+        viewModel.getBasketIdCountDict()
         XCTAssertEqual(viewModel.basketCountDict, basketCount)
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

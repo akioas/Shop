@@ -17,6 +17,12 @@ struct Basket: Decodable {
 }
 
 class Repository {
-    static let shared = Repository()
-    var basketItemsCount: Int?
+    let defaults = UserDefaults()
+    let key = "basketItemsCount"
+    func getBasketItemsCount() -> Int? {
+        defaults.integer(forKey: key)
+    }
+    func setBasketItemsCount(count: Int) {
+        defaults.set(count, forKey: key)
+    }
 }
