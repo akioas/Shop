@@ -20,6 +20,8 @@ class MyCartViewModel: ObservableObject {
                 if let basket = result.basket {
                     Repository().setBasketItemsCount(count: basket.count)
                     self.basketItemsCount = basket.count
+                } else {
+                    Repository().setBasketItemsCount(count: 0)
                 }
             case .failure(let error):
                 print(error)
