@@ -16,10 +16,10 @@ class MyCartViewModel: ObservableObject {
             switch result {
             case .success(let result):
                 self.cartData = result
-                self.getBasketCount()
+                self.getBasketIdCountDict()
                 if let basket = result.basket {
+                    Repository().setBasketItemsCount(count: basket.count)
                     self.basketItemsCount = basket.count
-                    Repository.shared.basketItemsCount = basket.count
                 }
             case .failure(let error):
                 print(error)
@@ -27,10 +27,14 @@ class MyCartViewModel: ObservableObject {
         }
     }
     
-    func getBasketCount() {
+    func getBasketIdCountDict() {
         if let ids = self.cartData?.basket?.compactMap( { $0.id } ) {
             self.basketCountDict = ids.reduce(into: [:]) {
                       counts, id in  counts[id, default: 0] += 1  }
         }
+    }
+    
+    func getBasketItemsCount() -> Int? {
+        Repository().getBasketItemsCount()
     }
 }

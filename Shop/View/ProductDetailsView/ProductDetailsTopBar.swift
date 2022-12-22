@@ -4,7 +4,7 @@ import SwiftUI
 
 struct ProductDetailsTopBar: View {
     
-    @State var count = Repository.shared.basketItemsCount
+    @State var count = MyCartViewModel().getBasketItemsCount()
 
     var body: some View {
         
